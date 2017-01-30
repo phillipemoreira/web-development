@@ -19,14 +19,18 @@
    			background-color: #BF00FF;
    			width: 300px;
    			height: 200px;
-            float: left;
+            position: absolute;
+            top: 250px;
+            z-index: 2;
    		}
 
    		.redbox {
    			background-color: red;
    			width: 500px;
    			height: 100px;
-            float: right;
+            position: relative;
+            left: -100px;
+            z-index: 1;
    		}
 
 
@@ -38,14 +42,6 @@
    		.underline {
    			text-decoration: underline;
    		}
-
-         .floatleft {
-            float: left;
-         }
-
-         .clear {
-            clear: both;
-         }
 
    		#small {
    			font-size: 400%;
@@ -65,9 +61,8 @@
 			<p class="large">This is some more text.</p>
 		</div>
 
-      <dir class="clear"></dir>
 		
-		<p class="floatleft">Yet some more text.</p>
+		<p>Yet some more text.</p>
 		<p>The third <span class="underline large">word</span> in this paragraph is underlined.</p>
 	</body>
 </html>
