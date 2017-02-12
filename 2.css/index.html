@@ -1,0 +1,68 @@
+
+<!doctype html>
+<html>
+	<head>
+	    <title>css</title>
+
+	    <meta charset="utf-8" />
+	    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	   	
+	   	<style type="text/css">
+
+   		p {
+   			color: green;
+   		}
+
+   		.purple {
+            /*http://html-color-codes.info/*/
+   			background-color: #BF00FF;
+   			width: 300px;
+   			height: 200px;
+            position: absolute;
+            top: 250px;
+            z-index: 2;
+   		}
+
+   		.redbox {
+   			background-color: red;
+   			width: 500px;
+   			height: 100px;
+            position: relative;
+            left: -100px;
+            z-index: 1;
+   		}
+
+
+   		.large {
+   			font-size: 200%;
+   			color: pink;
+   		}
+
+   		.underline {
+   			text-decoration: underline;
+   		}
+
+   		#small {
+   			font-size: 400%;
+   			color: gray;
+   		}
+
+	    </style>    
+	</head>
+
+	<body>
+
+		<div class="purple">
+			<p id="small" class="large">This is some text.</p>
+		</div>
+
+		<div class="redbox">
+			<p class="large">This is some more text.</p>
+		</div>
+
+		
+		<p>Yet some more text.</p>
+		<p>The third <span class="underline large">word</span> in this paragraph is underlined.</p>
+	</body>
+</html>
