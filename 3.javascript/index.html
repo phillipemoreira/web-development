@@ -12,6 +12,7 @@
 
 <body>
    <button onclick="alert('hi')">click me!</button>
+   <button id="myButton">click me again</button>
 
    <p id="text">Some text</p>
 
@@ -20,6 +21,9 @@
    		alert("Page loaded")
 
    		document.getElementById("text").innerHTML = "some more text";
+   		document.getElementById("myButton").onclick = function() {
+   			alert("Hello!");
+   		}
    
    </script>
 </body>
