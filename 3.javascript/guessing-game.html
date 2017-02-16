@@ -1,0 +1,65 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>javascript</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style type="text/css">
+      #main {
+        background-color: #e0dede;
+        height: 250px;
+        width: 250px;
+        border-radius: 50%;
+        position: relative;
+      }
+
+      #content{
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        color: #423c3c;
+        font-weight: bold;
+      }
+
+    </style>
+
+</head>
+
+<body>
+
+  <div id="main">
+    <div id="content">
+      <p>How many fingers am I holding?</p>
+      <input type="text" id="inputAnswer" placeholder="type here...">
+      <button id="btnVerify">verify</button>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var answerVal;
+
+    document.getElementById("btnVerify").onclick = function(){
+
+      answerVal = document.getElementById("inputAnswer").value;
+
+      var myNumber = Math.floor(Math.random() * 6);
+
+      if (answerVal == myNumber){
+        alert("You are correct!");
+      }
+      else {
+        alert("You are wrong, my number was: " + myNumber);
+      }
+
+    }
+   
+  </script>
+</body>
+</html>
