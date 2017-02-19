@@ -1,0 +1,37 @@
+  body {
+     margin: 10px;
+  }
+
+  #background {
+     background-color: black;
+     width: 560px;
+     height: 560px;
+  }
+
+  #topbar {
+     background-color: #6cb5c9;
+     height: 50px;
+  }
+
+  #topbar p {
+     padding: 12px;
+     margin: 0;
+     float: left;
+  }
+
+  #topbar button {
+     margin: 10px;
+     float: right;
+  }
+
+  #topbar span {
+     font-weight: bold;
+  }
+
+  #box {
+     width: 25px;
+     height: 25px;
+     border-radius: 50px;
+     visibility: hidden;
+     position: relative;
+  }
