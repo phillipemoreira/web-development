@@ -3,6 +3,9 @@
    var clickedTime;
    var reactionTime;
 
+   var bleep = new Audio();
+   bleep.src = 'resources/click.mp3';
+
    function moveCircle(){
       var randonLeft = Math.random() * 502;
       var randonTop = Math.random() * 412;
@@ -76,6 +79,7 @@
    }
 
    document.getElementById("box").onclick = function(){
+      bleep.play();
       this.style.visibility = "hidden";
       updateReactionTime();
       moveCircle();
