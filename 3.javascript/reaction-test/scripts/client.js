@@ -9,8 +9,8 @@
    // functions
 
    function moveCircle(){
-      var randonLeft = Math.random() * 532;
-      var randonTop = Math.random() * 484;
+      var randonLeft = Math.random() * 420;
+      var randonTop = Math.random() * 368;
 
       document.getElementById("box").style.top = randonTop.toString() + 'px';
       document.getElementById("box").style.left = randonLeft.toString() + 'px';

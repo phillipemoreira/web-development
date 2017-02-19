@@ -4,24 +4,61 @@
 
   #background {
      background-color: black;
-     width: 560px;
-     height: 560px;
-  }
-
-  #topbar {
-     background-color: #6cb5c9;
-     height: 50px;
-  }
-
-  #topbar p {
-     padding: 12px;
+     width: 450px;
+     height: 400px;
+     border-style: solid;
+     border-width: 3px 0 3px 3px;
+     border-color: #A79DC8;
      margin: 0;
+     padding: 0;
      float: left;
   }
 
+  #topbar {
+     background-color: #A79DC8;
+     height: 50px;
+     width: 560px;
+     padding: 0;
+     margin: 0;
+     top: 0;
+     float: left;
+  }
+
+  #right-pane {
+     background-color: #C7C9D5;
+     height: 400px;
+     width: 110px;
+     border-style: solid;
+     border-width: 3px 3px 3px 0;
+     border-color: #A79DC8;
+     margin: 0;
+     padding: 0;
+     float: left;
+  }
+
+  #right-pane p {
+    margin:0;
+    padding: 3px;
+    font-weight: bold;
+  }
+
+  #topbar p {
+     padding: 10px;
+     margin: 0px;
+     float: left;
+     top: 0;
+  }
+
+  #topbar h2 {
+     padding: 0px;
+     margin: 0px;
+     top: 0;
+  }
+
   #topbar button {
-     margin: 10px;
-     float: right;
+    margin: 10px;
+    float: right;
+    top: 0;
   }
 
   #topbar span {
