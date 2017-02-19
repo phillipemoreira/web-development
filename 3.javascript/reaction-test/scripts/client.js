@@ -6,12 +6,14 @@
    var bleep = new Audio();
    bleep.src = 'resources/click.mp3';
 
-   function moveCircle(){
-      var randonLeft = Math.random() * 502;
-      var randonTop = Math.random() * 412;
+   // functions
 
-      document.getElementById("box").style.top = randonLeft.toString() + 'px';
-      document.getElementById("box").style.left = randonTop.toString() + 'px';
+   function moveCircle(){
+      var randonLeft = Math.random() * 532;
+      var randonTop = Math.random() * 484;
+
+      document.getElementById("box").style.top = randonTop.toString() + 'px';
+      document.getElementById("box").style.left = randonLeft.toString() + 'px';
       document.getElementById("box").style.backgroundColor = getRandomColor();
 
       var randonTime = Math.random() * 3000;
@@ -28,11 +30,11 @@
    }
 
    function getReactionTimeColor(){
-      if (reactionTime < 500) {
+      if (reactionTime < 800) {
          return "green";
-      } else if (reactionTime < 750){
+      } else if (reactionTime < 1400){
          return "blue";
-      } else if (reactionTime < 1000){
+      } else if (reactionTime < 1900){
          return "orange";
       } else {
          return "red";
@@ -59,6 +61,8 @@
       }
       return color;
    }
+
+   // Onclicks
 
    document.getElementById("btn-start").onclick = function(){
       if (isStarted == false){
