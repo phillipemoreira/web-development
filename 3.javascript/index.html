@@ -1,0 +1,65 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>javascript</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+   	
+</head>
+
+<body>
+	<button onclick="alert('hi')">click me!</button> <br>
+	<button id="myButton">click me again</button> <br>
+	<p id="text">Some text</p>
+
+	<hr/>
+
+   	<button id="textChanger">Text changer</button> <br>
+	<div id="firstDiv">
+		This is some text.
+	</div>
+
+	<hr/>
+
+   	<button id="textAppender">Append some text</button> <br>
+	<div id="secondDiv">
+		java script is ... 
+	</div>
+
+	<hr/>
+
+	<button id="textCreator">create text</button> <br>
+	<div id="emptyDiv"></div>
+
+	<hr/>
+
+	<script type="text/javascript">
+
+		alert("Page loaded");
+
+   		document.getElementById("text").innerHTML = "some more text";
+
+   		document.getElementById("myButton").onclick = function() {
+   			alert("Hello!");
+   		};
+
+   		document.getElementById("textChanger").onclick = function(){
+   			document.getElementById("firstDiv").innerHTML = "this is awesome!";
+   		};
+
+   		document.getElementById("textAppender").onclick = function(){
+   			document.getElementById("secondDiv").innerHTML =
+   				document.getElementById("secondDiv").innerHTML +
+				"great";
+   		};
+
+   		document.getElementById("textCreator").onclick = function(){
+   			document.getElementById("emptyDiv").innerHTML = "<ul><li>Cat</li><li>Dog</li></ul>";
+   		};
+   
+	</script>
+</body>
+</html>
