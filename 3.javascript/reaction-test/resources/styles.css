@@ -72,3 +72,12 @@
      visibility: hidden;
      position: relative;
   }
+
+  .clear {
+    margin: 0 auto;
+    clear: both;
+  }
+
+  #central {
+    position: fixed;
+  }
