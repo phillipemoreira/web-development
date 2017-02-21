@@ -62,17 +62,17 @@
       return color;
    }
 
-   // Onclicks
+   // clicks
 
-   document.getElementById("btn-start").onclick = function(){
+   $("#btn-start").click(function(){
       if (isStarted == false){
          console.log("Reaction time test started.");
          isStarted = true;
          moveCircle();
       }
-   }
+   });
 
-   document.getElementById("btn-stop").onclick = function(){
+   $("#btn-stop").click(function(){
       if (isStarted == true){
          isStarted = false;
          document.getElementById("box").style.visibility = "hidden";
@@ -80,11 +80,11 @@
          document.getElementById("time").style.color = "#333333"
          console.log("Reaction time test ended.");  
       }
-   }
+   });
 
-   document.getElementById("box").onclick = function(){
+   $("#box").click(function(){
       bleep.play();
       this.style.visibility = "hidden";
       updateReactionTime();
       moveCircle();
-   }
+   });
