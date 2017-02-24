@@ -3,6 +3,8 @@
    var clickedTime;
    var reactionTime;
 
+   var attemptCount = 0;
+
    var bleep = new Audio();
    bleep.src = 'resources/click.mp3';
 
@@ -12,16 +14,16 @@
       var randonLeft = Math.random() * 420;
       var randonTop = Math.random() * 368;
 
-      document.getElementById("box").style.top = randonTop.toString() + 'px';
-      document.getElementById("box").style.left = randonLeft.toString() + 'px';
-      document.getElementById("box").style.backgroundColor = getRandomColor();
+      $('#box').css('top', randonTop.toString() + 'px');
+      $('#box').css('left', randonLeft.toString() + 'px');
+      $('#box').css('backgroundColor', getRandomColor());
 
       var randonTime = Math.random() * 3000;
 
       console.log("timeout started.");
       setTimeout(function(){
          if (isStarted == true){
-            document.getElementById("box").style.visibility ="visible";
+            $('#box').css('visibility', 'visible');
             createdTime = Date.now();
             console.log("circle drawn.");
          }
@@ -47,8 +49,8 @@
 
       var formattedReactionTime = reactionTime + "ms";
 
-      document.getElementById("time").style.color = getReactionTimeColor();
-      document.getElementById("time").innerHTML = formattedReactionTime;
+      $('#time').html(formattedReactionTime);
+      $('#time').css('color', getReactionTimeColor());
 
       console.log("circle clicked in "+  formattedReactionTime)
    }
@@ -62,29 +64,46 @@
       return color;
    }
 
+   function stop() {
+      isStarted = false;
+
+      $('#box').css('visibility', 'hidden');
+      $('#gameover').css('visibility', 'visible');
+
+      console.log("Reaction time test ended.");  
+   }
+
    // clicks
 
    $("#btn-start").click(function(){
       if (isStarted == false){
          console.log("Reaction time test started.");
+         
+         $('#gameover').css('visibility', 'hidden');
+
          isStarted = true;
+         attemptCount = 0;
+         
          moveCircle();
       }
    });
 
    $("#btn-stop").click(function(){
       if (isStarted == true){
-         isStarted = false;
-         document.getElementById("box").style.visibility = "hidden";
-         document.getElementById("time").innerHTML = "(0)ms";
-         document.getElementById("time").style.color = "#333333"
-         console.log("Reaction time test ended.");  
+         stop();
       }
    });
 
    $("#box").click(function(){
       bleep.play();
-      this.style.visibility = "hidden";
+      $(this).css('visibility', 'hidden');
+      
       updateReactionTime();
-      moveCircle();
+
+      attemptCount++;      
+      if (attemptCount < 10){
+         moveCircle();   
+      } else {
+         stop();
+      }
    });

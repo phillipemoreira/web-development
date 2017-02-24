@@ -81,3 +81,10 @@
   #central {
     position: fixed;
   }
+
+  #gameover {
+    text-align: center;
+    padding-top: 30%;
+    font-size: 2.5em;
+    visibility: hidden;
+  }
