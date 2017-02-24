@@ -43,16 +43,21 @@
       }
    }
 
+   function updateAttemptCountLabel(reactionTime) {
+      var attemptCountLabelId = '#attempt' + (attemptCount + 1);
+      $(attemptCountLabelId).html(reactionTime);
+   }
+
    function updateReactionTime(){
       clickedTime = Date.now();
       reactionTime = clickedTime - createdTime;
 
-      var formattedReactionTime = reactionTime + "ms";
+      updateAttemptCountLabel(reactionTime);
 
-      $('#time').html(formattedReactionTime);
+      $('#time').html(reactionTime);
       $('#time').css('color', getReactionTimeColor());
 
-      console.log("circle clicked in "+  formattedReactionTime)
+      console.log("circle clicked in "+  reactionTime + 'ms')
    }
    
    function getRandomColor() {
@@ -64,6 +69,17 @@
       return color;
    }
 
+   function start() {
+      console.log("Reaction time test started.");
+      
+      $('#gameover').css('visibility', 'hidden');
+
+      isStarted = true;
+      attemptCount = 0;
+      
+      moveCircle();
+   }
+
    function stop() {
       isStarted = false;
 
@@ -73,18 +89,25 @@
       console.log("Reaction time test ended.");  
    }
 
+   function handleBoxClick() {
+      bleep.play();
+      $(this).css('visibility', 'hidden');
+      
+      updateReactionTime();
+
+      attemptCount++;
+      if (attemptCount < 10){
+         moveCircle();   
+      } else {
+         stop();
+      }
+   }
+
    // clicks
 
    $("#btn-start").click(function(){
       if (isStarted == false){
-         console.log("Reaction time test started.");
-         
-         $('#gameover').css('visibility', 'hidden');
-
-         isStarted = true;
-         attemptCount = 0;
-         
-         moveCircle();
+         start();
       }
    });
 
@@ -95,15 +118,5 @@
    });
 
    $("#box").click(function(){
-      bleep.play();
-      $(this).css('visibility', 'hidden');
-      
-      updateReactionTime();
-
-      attemptCount++;      
-      if (attemptCount < 10){
-         moveCircle();   
-      } else {
-         stop();
-      }
+      handleBoxClick();
    });
