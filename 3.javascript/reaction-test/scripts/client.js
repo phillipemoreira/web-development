@@ -2,8 +2,8 @@
    var createdTime;
    var clickedTime;
    var reactionTime;
-
-   var attemptCount = 0;
+   
+   var attempts;
 
    var bleep = new Audio();
    bleep.src = 'resources/click.mp3';
@@ -43,8 +43,18 @@
       }
    }
 
+   function getAverageReactionTime() {
+      var sum = 0;
+      attempts.forEach(function(element){
+         sum += element;
+      });
+
+      var average = (sum / attempts.length);
+      return Math.round(average);
+   }
+
    function updateAttemptCountLabel(reactionTime) {
-      var attemptCountLabelId = '#attempt' + (attemptCount + 1);
+      var attemptCountLabelId = '#attempt' + attempts.length;
       $(attemptCountLabelId).html(reactionTime);
    }
 
@@ -52,10 +62,13 @@
       clickedTime = Date.now();
       reactionTime = clickedTime - createdTime;
 
+      attempts.push(reactionTime);
       updateAttemptCountLabel(reactionTime);
 
-      $('#time').html(reactionTime);
-      $('#time').css('color', getReactionTimeColor());
+      var averageReactionTime = getAverageReactionTime();
+
+      $('#average').html(averageReactionTime);
+      $('#average').css('color', getReactionTimeColor());
 
       console.log("circle clicked in "+  reactionTime + 'ms')
    }
@@ -69,13 +82,23 @@
       return color;
    }
 
+   function clear(){
+      $('#gameover').css('visibility', 'hidden');
+      $('#average').html('(0)');
+
+      for (var i = 1; i <= 10; i++) {
+         var attemptCountLabelId = '#attempt' + i;
+         $(attemptCountLabelId).html('0');   
+      }
+   }
+
    function start() {
       console.log("Reaction time test started.");
       
-      $('#gameover').css('visibility', 'hidden');
+      clear();
 
       isStarted = true;
-      attemptCount = 0;
+      attempts = new Array();
       
       moveCircle();
    }
@@ -95,8 +118,7 @@
       
       updateReactionTime();
 
-      attemptCount++;
-      if (attemptCount < 10){
+      if (attempts.length < 10){
          moveCircle();   
       } else {
          stop();
