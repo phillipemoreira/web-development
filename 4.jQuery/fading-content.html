@@ -1,0 +1,36 @@
+
+
+<!doctype html>
+<html>
+<head>
+    <title>javascript</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  	<script type="text/javascript" src="scripts/jquery.min.js"></script>
+
+    <style type="text/css">
+		
+
+    </style>
+   	
+</head>
+
+<body>
+
+	<div id="maindiv">
+		<p>This is the main paragraph with some basic text.</p>
+		<button id="fader">Fade out</button>
+	</div>
+
+	<script type="text/javascript">
+
+	$('#fader').click(function() {
+		$('p').fadeOut();
+	});
+
+	</script>
+</body>
+</html>

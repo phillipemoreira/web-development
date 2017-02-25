@@ -1,0 +1,52 @@
+
+
+<!doctype html>
+<html>
+<head>
+    <title>javascript</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  	<script type="text/javascript" src="scripts/jquery.min.js"></script>
+
+    <style type="text/css">
+		
+		div {
+			height: 200px;
+			width: 200px;
+			margin-top: 5px;
+		}
+
+		#circle {
+			border-radius: 50%;
+			background-color: green;
+		}
+
+		.square {
+			height: 200px;
+			width: 200px;
+			background-color: red;
+		}
+
+
+    </style>
+   	
+</head>
+
+<body>
+
+	<div id="circle"></div>
+	<div class="square"></div>
+	<div class="square"></div>
+
+	<script type="text/javascript">
+
+	$('#circle').click(function() {
+		$('.square').fadeOut();
+	});
+
+	</script>
+</body>
+</html>
