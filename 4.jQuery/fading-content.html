@@ -22,13 +22,15 @@
 
 	<div id="maindiv">
 		<p>This is the main paragraph with some basic text.</p>
-		<button id="fader">Fade out</button>
+		<button id="fader">Fade Out</button>
 	</div>
 
 	<script type="text/javascript">
 
 	$('#fader').click(function() {
-		$('p').fadeOut();
+		$('p').fadeOut(2000, function(){
+			$('p').fadeIn();
+		});
 	});
 
 	</script>
