@@ -1,0 +1,120 @@
+
+
+<!doctype html>
+<html>
+<head>
+    <title>javascript</title>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<script type="text/javascript" src="scripts/jquery.min.js"></script>
+
+	<style type="text/css">
+		
+		h1 {
+			font-family: Arial, Helvetica, sans-serif;
+			color: gray;
+		}
+
+		#dick {
+			background-color: #BD8966;
+			position: relative;
+			height: 200px;
+			width: 80px;
+			border-radius: 40px;
+			left: 75px;
+		}
+
+		#head {
+			background-color: #FFC3AA;
+			width: 80px;
+			height: 80px;
+			left: 83px;
+			position: absolute;
+			border-radius: 40px;
+			z-index: 1;
+		}
+
+		#urethra{
+			background-color: gray;
+			width: 3px;
+			height: 10px;
+			top: 25px;
+			left: 122px;
+			position: absolute;
+			z-index: 1;
+		}
+
+		.ball {
+			background-color: #BD8966;
+			position: relative;
+			height: 100px;
+			width: 100px;
+			border-radius: 50%;
+			left: 20px;
+			top: -30px;
+			padding-top: 0;
+			float: left;
+		}
+
+		#rightball {
+			left: 10px;
+		}
+
+		.clear {
+			clear: both;
+		}
+
+    </style>
+   	
+</head>
+
+<body>
+	<div id="head"></div>
+	<div id="urethra"></div>
+	<div id="dick"></div>
+	<div class="ball"></div>
+	<div id="rightball" class="ball"></div>
+
+	<div class="clear"></div>
+	<div>
+		<h1 id="text">click in the head</h1>
+	</div>
+
+	<script type="text/javascript">
+
+		var running = false;
+
+		var enlargeDick = {
+			height: "300px"
+		};
+
+		var reduceDick = {
+			height: "200px"
+		};
+
+		function animationCallback(){
+			if ($('#dick').css('height') == '200px'){
+				startAnimation(enlargeDick);
+			} else {
+				startAnimation(reduceDick);
+			}
+		}
+
+		function startAnimation(properties){
+			$('#dick').animate(properties, 1500, animationCallback);
+		}
+
+		$('#head').click(function(){
+			if (running == false){
+				running = true;
+				$('#text').html('YOU NAUGHTY :)');
+				startAnimation(enlargeDick);
+			} 
+		});
+
+	</script>
+</body>
+</html>
