@@ -1,11 +1,11 @@
 {
-  "name": "@phillipe/learning-bower",
+  "name": "4.jQuery",
   "homepage": "https://github.com/phillipemoreira/web-development",
   "authors": [
     "Phillipe Moreira <phillipealexmoreira@gmail.com>"
   ],
-  "description": "Learning Bower",
-  "main": "index.html",
+  "description": "Rob Percival's jQuery section",
+  "main": "",
   "license": "MIT",
   "ignore": [
     "**/.*",
@@ -13,5 +13,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1"
+  }
 }

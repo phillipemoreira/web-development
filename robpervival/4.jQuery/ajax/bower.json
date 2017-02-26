@@ -1,0 +1,21 @@
+{
+  "name": "@phillipe/ajax",
+  "description": "learning ajax",
+  "main": "index.js",
+  "authors": [
+    "Phillipe Moreira"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/phillipemoreira/web-development",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+    "dependencies": {
+    "jquery": "^3.1.1"
+  }
+}
