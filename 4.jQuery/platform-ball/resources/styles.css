@@ -1,30 +1,30 @@
 #background {
 	height: 500px;
-	width: 1200px;
+	width: 700px;
 	position: relative;
 	background-color: #9BD5FA;
 }
 
 #air {
 	height: 460px;
-	width: 1200px;
+	width: 700px;
 	position: absolute;
 }
 
 #ground {
 	height: 40px;
-	width: 1200px;
+	width: 700px;
 	position: absolute;
 	bottom: 0;
 	background-image: url("images/dirt.png");
 }
 
 #ball {
-	height: 20px;
-	width: 20px;
+	height: 40px;
+	width: 40px;
 	border-radius: 50%;
 	left: 250px;
-	top: 440px;
+	top: 420px;
 	position: absolute;
 	background-image: url("images/ball.png");
 	z-index: 5;
