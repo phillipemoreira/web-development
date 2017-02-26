@@ -1,0 +1,17 @@
+{
+  "name": "@phillipe/learning-bower",
+  "homepage": "https://github.com/phillipemoreira/web-development",
+  "authors": [
+    "Phillipe Moreira <phillipealexmoreira@gmail.com>"
+  ],
+  "description": "Learning Bower",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
