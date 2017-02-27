@@ -3,10 +3,10 @@ var jshint = require('gulp-jshint');
 var clean = require('gulp-clean');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
-var es = require('event-stream');
 var htmlmin = require('gulp-htmlmin');
 var cleanCSS = require('gulp-clean-css');
 var runSequence = require('run-sequence');
+var streamqueue = require('streamqueue');
 
 gulp.task('clean', function() {
 	return gulp.src('dist/')
@@ -20,9 +20,10 @@ gulp.task('jshint', function() {
 });
 
 gulp.task('uglify', function() {
-	return es.merge([
+	return streamqueue({objectMode: true}, 
 			gulp.src('bower_components/jquery/dist/jquery.min.js'),
-			gulp.src('client/js/*.js').pipe(uglify())])
+			gulp.src('client/js/*.js').pipe(uglify())
+		)
 		.pipe(concat('scripts.min.js'))
 		.pipe(gulp.dest('dist/'));
 });
