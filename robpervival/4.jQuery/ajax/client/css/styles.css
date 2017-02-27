@@ -3,7 +3,35 @@ h1 {
 }
 
 #wrapper {
-	width: 500px;
+	width: 600px;
 	margin: 0 auto;
-	background-color: #e3e8ef; 
+	font-family: Helvetica;
+	font-size: 1.2em;
+}
+
+input {
+	width: 330px;
+	height: 30px;
+	padding: 5px;
+	border-radius: 5px;
+	font-size: 1.2em;
+	border: 1px solid grey;
+	margin-bottom: 10px;
+}
+
+label {
+	width: 220px;
+	float: left;
+	padding-top: 7px;
+}
+
+#submitButton {
+	height: 50px;
+	width: 100px;
+	margin-left: 220px;
+}
+
+#error {
+	color: red;
+	margin: 20px;
 }

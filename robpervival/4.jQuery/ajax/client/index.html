@@ -10,10 +10,33 @@
     <body>
         <h1>Asyncronous Javascript And XML.</h1>
         <h2 id="placeholder"></h2>
-        <script type="text/javascript" src="scripts.min.js"></script>
 
         <hr/>
+
         <h2> Form validation</h2>
-        <div id="wrapper">haha</div>
+        <div id="wrapper">
+
+            <div id="error"></div>
+
+            <form id="validationForm">
+
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" />
+
+                <label for="phone">Telephone</label>
+                <input type="text" name="phone" id="phone" />
+
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password"/>
+
+                <label for="password-confirmation">Password confirmation</label>
+                <input type="password" name="password-confirmation" id="passwordConfirmation" />
+
+                <input type="submit" value="submit" id="submitButton">
+
+            </form>
+        </div>
+
+        <script type="text/javascript" src="scripts.min.js"></script>
     </body>
 </html>
