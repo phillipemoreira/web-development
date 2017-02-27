@@ -1,5 +1,5 @@
 {
-  "name": "@phillipe/ajax",
+  "name": "ajax",
   "description": "learning ajax",
   "main": "index.js",
   "authors": [
