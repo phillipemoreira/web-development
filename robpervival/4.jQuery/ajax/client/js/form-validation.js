@@ -16,7 +16,7 @@ $('#validationForm').submit(function(event) {
 		errorMessage += '<br />* Invalid telephone number.';
 	}
 
-	if ($('#password').val() == '' ) {
+	if ($('#password').val() === '' ) {
 		errorMessage += '<br />* Please enter a password.';
 	}
 
@@ -24,7 +24,7 @@ $('#validationForm').submit(function(event) {
 		errorMessage += '<br />* The passwords are not the same.';
 	}
 
-	if (errorMessage == ''){
+	if (errorMessage === ''){
 		alert('success!');
 	}
 
