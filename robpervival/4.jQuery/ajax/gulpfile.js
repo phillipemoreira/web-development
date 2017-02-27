@@ -41,12 +41,21 @@ gulp.task('cssmin', function() {
 		.pipe(gulp.dest('dist/'));
 });
 
-gulp.task('copy', function() {
+gulp.task('index', function() {
 	return gulp.src('client/index.html')
+		.pipe(htmlmin({collapseWhitespace: true}))
 		.pipe(gulp.dest('dist/'));
 });
 
-gulp.task('default', function (callback) {
+gulp.task('watch', function() {
+	gulp.watch(['client/**/*.*'], ['prod']);
+});
+
+gulp.task('prod', function (callback) {
 	return runSequence('clean',
-		['jshint', 'uglify', 'htmlmin', 'cssmin', 'copy'], callback);
+		['jshint', 'uglify', 'htmlmin', 'cssmin', 'index'], callback);
+});
+
+gulp.task('default', function (callback) {
+	return runSequence('prod', ['watch'], callback);
 });

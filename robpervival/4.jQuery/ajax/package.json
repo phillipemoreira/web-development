@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
     "postinstall": "bower install",
-    "prestart": "gulp"
+    "prestart": "gulp prod"
   },
   "repository": {
     "type": "git",
