@@ -1,0 +1,53 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: 300;
+}
+
+#codeplayer-menubar {
+	background-color: #EEEEEE;
+	height: 40px;
+	width: 100%;
+	border-bottom: 1px solid gray;
+}
+
+#codeplayer-logo {
+	padding: 5px 0 0 20px;
+	font-weight: bold;
+	font-size: 120%;
+	float: left;
+}
+
+#codeplayer-runbuttondiv {
+	float: right;
+	padding: 5px 10px 0 0;
+}
+
+#codeplayer-runbutton {
+	font-size: 120%;
+}
+
+#codeplayer-toogles {
+	width: 220px;
+	margin: 0 auto;
+	list-style: none;
+	border: 1px solid grey;
+	border-radius: 3px;
+	height: 27px;
+}
+
+#codeplayer-toogles li {
+	float: left;
+	border-right: 1px solid grey;
+	padding: 5px;
+}
+
+#codeplayer-body {
+	width: 100%;
+	background-color: blue
+}
+
+#codeplayer-html {
+
+}
