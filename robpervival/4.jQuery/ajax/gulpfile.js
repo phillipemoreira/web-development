@@ -22,6 +22,7 @@ gulp.task('jshint', function() {
 gulp.task('uglify', function() {
 	return streamqueue({objectMode: true}, 
 			gulp.src('bower_components/jquery/dist/jquery.min.js'),
+			gulp.src('bower_components/jquery-ui/jquery-ui.min.js'),
 			gulp.src('client/js/*.js').pipe(uglify())
 		)
 		.pipe(concat('scripts.min.js'))
@@ -35,10 +36,17 @@ gulp.task('htmlmin', function() {
 });
 
 gulp.task('cssmin', function() {
-	return gulp.src('client/css/*.css')
-		.pipe(cleanCSS())
+	return streamqueue({objectMode: true}, 
+			gulp.src('bower_components/jquery-ui/themes/base/jquery-ui.min.css'),
+			gulp.src('client/css/*.css').pipe(cleanCSS())
+		)
 		.pipe(concat('styles.min.css'))
 		.pipe(gulp.dest('dist/'));
+});
+
+gulp.task('images', function() {
+	return gulp.src('bower_components/jquery-ui/themes/base/images/*.png')
+		.pipe(gulp.dest('dist/images/'));
 });
 
 gulp.task('index', function() {
@@ -51,9 +59,9 @@ gulp.task('watch', function() {
 	gulp.watch(['client/**/*.*'], ['prod']);
 });
 
-gulp.task('prod', function (callback) {
+gulp.task('prod', ['jshint'],  function (callback) {
 	return runSequence('clean',
-		['jshint', 'uglify', 'htmlmin', 'cssmin', 'index'], callback);
+		['uglify', 'htmlmin', 'cssmin', 'index', 'images'], callback);
 });
 
 gulp.task('default', function (callback) {
