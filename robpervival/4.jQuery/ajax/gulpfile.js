@@ -38,6 +38,7 @@ gulp.task('htmlmin', function() {
 gulp.task('cssmin', function() {
 	return streamqueue({objectMode: true}, 
 			gulp.src('bower_components/jquery-ui/themes/base/jquery-ui.min.css'),
+			gulp.src('bower_components/jquery-ui/themes/smoothness/jquery-ui.min.css'),
 			gulp.src('client/css/*.css').pipe(cleanCSS())
 		)
 		.pipe(concat('styles.min.css'))
@@ -45,8 +46,10 @@ gulp.task('cssmin', function() {
 });
 
 gulp.task('images', function() {
-	return gulp.src('bower_components/jquery-ui/themes/base/images/*.png')
-		.pipe(gulp.dest('dist/images/'));
+	return gulp.src([
+			'bower_components/jquery-ui/themes/base/images/*.png',
+			'bower_components/jquery-ui/themes/smoothness/images/*.png'
+		]).pipe(gulp.dest('dist/images/'));
 });
 
 gulp.task('index', function() {
