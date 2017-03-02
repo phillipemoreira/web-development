@@ -1,1 +1,1 @@
-$('ul').sortable();
+$('#s-ul').sortable();

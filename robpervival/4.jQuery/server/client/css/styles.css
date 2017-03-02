@@ -1,4 +1,4 @@
-h1 {
+#ajax-h1 {
 	color: pink;
 }
 
@@ -9,7 +9,7 @@ h1 {
 	font-size: 1.2em;
 }
 
-input {
+.formvalidation-input {
 	width: 330px;
 	height: 30px;
 	padding: 5px;
@@ -19,7 +19,7 @@ input {
 	margin-bottom: 10px;
 }
 
-label {
+.formvalidation-label {
 	width: 220px;
 	float: left;
 	padding-top: 7px;
