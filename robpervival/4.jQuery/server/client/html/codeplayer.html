@@ -6,28 +6,49 @@
         <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <link rel="stylesheet" type="text/css" href="../styles.min.css">
+
     </head>
     <body id="codeplayer-body">
 
         <div id="codeplayer-wrapper">
+
             <div id="codeplayer-menubar">
                 <div id="codeplayer-logo">CodePlayer</div>
+
                 <div id="codeplayer-runbuttondiv">
                     <button id="codeplayer-runbutton">Run</button>
                 </div>
+
                 <ul id="codeplayer-toogles">
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>Javascript</li>
-                    <li>Result</li>
+                    <li class="codeplayer-toogle codeplayer-selected">HTML</li>
+                    <li class="codeplayer-toogle">CSS</li>
+                    <li class="codeplayer-toogle">Javascript</li>
+                    <li class="codeplayer-toogle codeplayer-selected" style="border: none;">Result</li>
                 </ul>
             </div>
-            <div id="codeplayer-body">
-                <div id="codeplayer-html"></div>
-                <div id="codeplayer-css"></div>
-                <div id="codeplayer-js"></div>
-                <div id="codeplayer-result"></div>
+
+            <div class="clear"></div>
+
+            <div class="codeplayer-code-container" id="codeplayer-html-container">
+                <div class="codeplayer-code-label">HTML</div>
+                <textarea>Example code</textarea>
             </div>
+
+            <div class="codeplayer-code-container" id="codeplayer-css-container">
+                <div class="codeplayer-code-label">CSS</div>
+                <textarea>Example code</textarea>
+            </div>
+
+            <div class="codeplayer-code-container" id="codeplayer-js-container">
+                <div class="codeplayer-code-label">JS</div>
+                <textarea>Example code</textarea>
+            </div>
+
+            <div class="codeplayer-code-container" id="codeplayer-result-container">
+                <div class="codeplayer-code-label">Result</div>
+                <iframe id="codeplayer-iframe"></iframe>
+            </div>
+
         </div>
 
         <script type="text/javascript" src="../scripts.min.js"></script>

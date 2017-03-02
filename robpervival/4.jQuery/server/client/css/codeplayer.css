@@ -29,12 +29,15 @@
 }
 
 #codeplayer-toogles {
-	width: 220px;
+	width: 237px;
 	margin: 0 auto;
 	list-style: none;
 	border: 1px solid grey;
 	border-radius: 3px;
 	height: 27px;
+	padding: 0;
+	position: relative;
+	top: 5px;
 }
 
 #codeplayer-toogles li {
@@ -43,11 +46,47 @@
 	padding: 5px;
 }
 
-#codeplayer-body {
-	width: 100%;
-	background-color: blue
+.clear {
+	clear: both;
 }
 
-#codeplayer-html {
+.codeplayer-code-container {
+	width: 50%;
+	float: left;
+	position: relative;
+}
 
+.codeplayer-code-label {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+
+.codeplayer-code-container textarea {
+	width: 100%;
+	height: 100%;
+	border: none;
+	border-right: 1px solid gray;
+	font-family: monotype;
+	font-size: 90%;
+	padding: 5px;
+}
+
+#codeplayer-html-container {
+
+}
+
+#codeplayer-css-container, #codeplayer-js-container {
+	display: none;
+}
+
+#codeplayer-iframe {
+	height: 100%;
+	position: relative;
+	left: 20px;
+	border: none;
+}
+
+.codeplayer-selected {
+	background-color: grey;
 }
