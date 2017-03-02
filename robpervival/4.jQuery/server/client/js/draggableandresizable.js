@@ -1,4 +1,4 @@
 $('#d-green-square').draggable();
 
-$('#resizable-square').draggable();
-$('#resizable-square').resizable();
+$('#d-resizable-square').draggable();
+$('#d-resizable-square').resizable();
