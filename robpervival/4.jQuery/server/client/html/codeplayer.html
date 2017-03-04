@@ -1,56 +1,58 @@
 <!doctype html>
 <html>
-    <head>
-        <title>JQuery</title>
-        <meta charset="utf-8"/>
-        <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <link rel="stylesheet" type="text/css" href="../styles.min.css">
+<head>
+    <title>JQuery</title>
+    <meta charset="utf-8"/>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" type="text/css" href="../styles.min.css">
 
-    </head>
-    <body id="codeplayer-body">
+</head>
+<body id="codeplayer-body">
 
-        <div id="codeplayer-wrapper">
+    <div id="codeplayer-wrapper">
 
-            <div id="codeplayer-menubar">
-                <div id="codeplayer-logo">CodePlayer</div>
+        <div id="codeplayer-menubar">
+            <div id="codeplayer-logo">CodePlayer</div>
 
-                <div id="codeplayer-runbuttondiv">
-                    <button id="codeplayer-runbutton">Run</button>
-                </div>
-
-                <ul id="codeplayer-toogles">
-                    <li class="codeplayer-toogle codeplayer-selected">HTML</li>
-                    <li class="codeplayer-toogle">CSS</li>
-                    <li class="codeplayer-toogle">Javascript</li>
-                    <li class="codeplayer-toogle codeplayer-selected" style="border: none;">Result</li>
-                </ul>
+            <div id="codeplayer-runbuttondiv">
+                <button id="codeplayer-runbutton">Run</button>
             </div>
 
-            <div class="clear"></div>
-
-            <div class="codeplayer-code-container" id="codeplayer-html-container">
-                <div class="codeplayer-code-label">HTML</div>
-                <textarea>Example code</textarea>
-            </div>
-
-            <div class="codeplayer-code-container" id="codeplayer-css-container">
-                <div class="codeplayer-code-label">CSS</div>
-                <textarea>Example code</textarea>
-            </div>
-
-            <div class="codeplayer-code-container" id="codeplayer-js-container">
-                <div class="codeplayer-code-label">JS</div>
-                <textarea>Example code</textarea>
-            </div>
-
-            <div class="codeplayer-code-container" id="codeplayer-result-container">
-                <div class="codeplayer-code-label">Result</div>
-                <iframe id="codeplayer-iframe"></iframe>
-            </div>
+            <ul id="codeplayer-toogles">
+                <li class="codeplayer-toogle codeplayer-selected">HTML</li>
+                <li class="codeplayer-toogle">CSS</li>
+                <li class="codeplayer-toogle">JS</li>
+                <li class="codeplayer-toogle codeplayer-selected" style="border: none;">Result</li>
+            </ul>
 
         </div>
 
-        <script type="text/javascript" src="../scripts.min.js"></script>
-    </body>
+        <div class="clear"></div>
+
+        <div class="codeplayer-code-container" id="codeplayer-HTML-container">
+            <div class="codeplayer-code-label">HTML</div>
+            <textarea id="codeplayer-htmlCode"></textarea>
+        </div>
+
+        <div class="codeplayer-code-container" id="codeplayer-CSS-container">
+            <div class="codeplayer-code-label">CSS</div>
+            <textarea id="codeplayer-cssCode"></textarea>
+        </div>
+
+        <div class="codeplayer-code-container" id="codeplayer-JS-container">
+            <div class="codeplayer-code-label">JS</div>
+            <textarea id="codeplayer-jsCode"></textarea>
+        </div>
+
+        <div class="codeplayer-code-container" id="codeplayer-Result-container">
+            <div class="codeplayer-code-label">Result</div>
+            <iframe id="codeplayer-iframe"></iframe>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="../scripts.min.js"></script>
+</body>
 </html>
+
