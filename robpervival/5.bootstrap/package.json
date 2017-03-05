@@ -1,0 +1,40 @@
+{
+  "name": "@phillipe/bootstrap",
+  "version": "1.0.0",
+  "description": "Learning Twitter Bootstrap",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "bower install",
+    "prestart": "gulp prod",
+    "start": "node index.js"    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/phillipemoreira/web-development.git"
+  },
+  "keywords": [
+    "bootstrap"
+  ],
+  "author": "Phillipe Moreira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/phillipemoreira/web-development/issues"
+  },
+  "homepage": "https://github.com/phillipemoreira/web-development#readme",
+  "dependencies": {
+    "express": "^4.15.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-clean-css": "^3.0.3",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-jshint": "^2.0.4",
+    "gulp-uglify": "^2.0.1",
+    "jshint": "^2.9.4",
+    "run-sequence": "^1.2.2",
+    "streamqueue": "^1.1.1"
+  }
+}

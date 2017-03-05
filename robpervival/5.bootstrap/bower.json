@@ -1,0 +1,21 @@
+{
+  "name": "bootstrap",
+  "description": "Learning Twitter Bootstrap",
+  "main": "index.js",
+  "authors": [
+    "Phillipe Moreira"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "bootstrap"
+  ],
+  "homepage": "https://github.com/phillipemoreira/web-development",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
