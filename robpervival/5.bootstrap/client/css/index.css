@@ -1,3 +1,7 @@
+#index-wrapper {
+    margin: 5px;
+}
+
 #index-body {
     font-family: "HelveticaNeue-Light",
         "Helvetica Neue Light",
@@ -8,16 +12,16 @@
 }
 
 #index-wrapper {
-    width: 500px;
+    width: 498px;
 }
 
 #index-ul {
-    padding: 5px 35px;
+    padding: 0;
     list-style: none;
 }
 
 #index-ul li {
-    margin: 2px;
+    margin: 2px 2px 1px 1px;
     float: left;
 }
 
@@ -26,21 +30,25 @@
     text-align: center;
     color: white;
     font-weight: bold;
-    background-color: #754996;
+    background-color: #4CAF50;
 }
 
 .index-a:link, .index-a:visited {
     background-color: white;
     color: black;
     border: 2px solid #4CAF50;
-    padding: 14px 25px;
+    padding: 14px 5px;
     text-align: center; 
     text-decoration: none;
     display: inline-block;
-    width: 135px;
+    width: 163px;
 }
 
 .index-a:hover, .index-a:active {
     background-color: #4CAF50;
     color: white;
+}
+
+.notimplemented:hover, .notimplemented:active {
+    background-color: red;
 }
