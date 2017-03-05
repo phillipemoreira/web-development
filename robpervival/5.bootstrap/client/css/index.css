@@ -1,7 +1,3 @@
-#index-wrapper {
-    margin: 5px;
-}
-
 #index-body {
     font-family: "HelveticaNeue-Light",
         "Helvetica Neue Light",
@@ -9,20 +5,6 @@
         Helvetica, Arial,
         "Lucida Grande",
         sans-serif; 
-}
-
-#index-wrapper {
-    width: 498px;
-}
-
-#index-ul {
-    padding: 0;
-    list-style: none;
-}
-
-#index-ul li {
-    margin: 2px 2px 1px 1px;
-    float: left;
 }
 
 #index-h1 {
@@ -37,11 +19,11 @@
     background-color: white;
     color: black;
     border: 2px solid #4CAF50;
-    padding: 14px 5px;
+    padding: 14px 14px;
     text-align: center; 
     text-decoration: none;
     display: inline-block;
-    width: 163px;
+    width: 100%;
 }
 
 .index-a:hover, .index-a:active {
@@ -51,4 +33,8 @@
 
 .notimplemented:hover, .notimplemented:active {
     background-color: red;
+}
+
+.index-col {
+    padding: 1px;
 }
