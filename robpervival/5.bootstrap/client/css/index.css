@@ -12,7 +12,7 @@
 }
 
 #index-ul {
-    padding-left: 35px;
+    padding: 5px 35px;
     list-style: none;
 }
 
@@ -37,6 +37,7 @@
     text-align: center; 
     text-decoration: none;
     display: inline-block;
+    width: 135px;
 }
 
 .index-a:hover, .index-a:active {

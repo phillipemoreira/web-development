@@ -20,7 +20,9 @@ gulp.task('jshint', function() {
 });
 
 gulp.task('uglify', function() {
-    return streamqueue({objectMode: true}, 
+    return streamqueue({objectMode: true},
+            gulp.src('bower_components/jquery/dist/jquery.min.js'),
+            gulp.src('bower_components/bootstrap/dist/js/bootstrap.min.js'),
             gulp.src('client/js/*.js').pipe(uglify())
         )
         .pipe(concat('scripts.min.js'))
@@ -34,7 +36,8 @@ gulp.task('htmlmin', function() {
 });
 
 gulp.task('cssmin', function() {
-    return streamqueue({objectMode: true}, 
+    return streamqueue({objectMode: true},
+            gulp.src('bower_components/bootstrap/dist/css/bootstrap.min.css'),
             gulp.src('client/css/*.css').pipe(cleanCSS())
         )
         .pipe(concat('styles.min.css'))
