@@ -1,7 +1,9 @@
 var express = require('express');
 var path = require('path');
-var gulpTasks = require('./gulpfile.js');
-var gulp = require('gulp');
+var http = require('http');
+
+// var gulpTasks = require('./gulpfile.js');
+// var gulp = require('gulp');
 
 function normalizePort(val){
     var port = parseInt(val, 10);
@@ -22,7 +24,10 @@ var app = express();
 app.use(express.static(path.join(__dirname + "/dist")));
 
 var port = normalizePort(process.env.PORT || '3000');
-app.listen(3000);
+app.set('port', port);
+
+var server = http.createServer(app);
+server.listen(port);
 
 console.log("BOOTSTRAP app running in port 3000.");
 
