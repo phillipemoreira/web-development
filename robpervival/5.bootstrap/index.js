@@ -25,6 +25,8 @@ app.use(express.static(path.join(__dirname + "/dist")));
 var port = normalizePort(process.env.PORT || '3000');
 app.listen(port)
 
+console.log('PHILLIPE LOG : ' + port)
+
 console.log("BOOTSTRAP app running in port 3000.");
 
 //gulp.start('watch');
