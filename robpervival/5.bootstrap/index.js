@@ -1,11 +1,15 @@
 var express = require('express');
-var app = express();
+var path = require('path');
 var gulpTasks = require('./gulpfile.js');
 var gulp = require('gulp');
 
-app.use(express.static(__dirname + "/dist"));
+var app = express();
+
+app.use(express.static(path.join(__dirname + "/dist")));
 app.listen(3000);
 
 console.log("BOOTSTRAP app running in port 3000.");
 
 //gulp.start('watch');
+
+module.exports = app;
