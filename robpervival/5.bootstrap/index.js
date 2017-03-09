@@ -8,4 +8,4 @@ app.listen(3000);
 
 console.log("BOOTSTRAP app running in port 3000.");
 
-gulp.start('watch');
+//gulp.start('watch');
