@@ -1,10 +1,10 @@
-#green-square {
+#d-green-square {
 	height: 200px;
 	width: 200px;
 	background-color: green;
 }
 
-#resizable-square {
+#d-resizable-square {
 	margin-top: 10px;
 	height: 200px;
 	width: 200px;

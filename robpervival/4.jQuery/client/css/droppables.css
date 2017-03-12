@@ -1,11 +1,11 @@
-#d-target {
+#dropables-target {
 	margin-top: 50px;
 	height: 400px;
 	width: 400px;
 	background-color: gray;
 }
 
-#d-square {
+#dropables-square {
 	width: 200px;
 	height: 200px;
 	background-color: #F6AAA8;
