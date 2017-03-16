@@ -36,6 +36,8 @@ gulp.task('uglify', function() {
 
 gulp.task('htmlmin', function() {
     return gulp.src([
+            '1.html/*.html',
+            '2.css/*.html',
             '4.jQuery/html/*.html',
             '5.bootstrap/html/*.html'
         ])
@@ -48,6 +50,7 @@ gulp.task('cssmin', function() {
             gulp.src('bower_components/jquery-ui/themes/base/jquery-ui.min.css'),
             gulp.src('bower_components/jquery-ui/themes/smoothness/jquery-ui.min.css'),
             gulp.src('client/styles.css').pipe(cleanCSS()),
+            gulp.src('2.css/*.css').pipe(cleanCSS()),
             gulp.src('4.jQuery/css/*.css').pipe(cleanCSS()),
             gulp.src('5.bootstrap/css/*.css').pipe(cleanCSS())
         )
@@ -59,6 +62,8 @@ gulp.task('images', function() {
     return gulp.src([
             'bower_components/jquery-ui/themes/base/images/*.png',
             'bower_components/jquery-ui/themes/smoothness/images/*.png',
+            '1.html/images/*.png',
+            '2.css/images/*.png',
             '4.jQuery/images/*.png',
             '5.bootstrap/images/*.png'
         ]).pipe(gulp.dest('dist/images/'));

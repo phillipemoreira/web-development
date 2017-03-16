@@ -1,35 +1,36 @@
 #index-body {
-    font-family: "HelveticaNeue-Light",
-        "Helvetica Neue Light",
-        "Helvetica Neue",
-        Helvetica, Arial,
-        "Lucida Grande",
-        sans-serif; 
+  font-family: "HelveticaNeue-Light",
+  "Helvetica Neue Light",
+  "Helvetica Neue",
+  Helvetica, Arial,
+  "Lucida Grande",
+  sans-serif; 
 }
+
 #index-h1 {
-    margin: 0 auto;
-    text-align: center;
-    color: white;
-    font-weight: bold;
-    background-color: #0078D7;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  background-color: #0078D7;
 }
 
 .index-a:link, .index-a:visited {
-    background-color: white;
-    color: black;
-    border: 2px solid #0078D7;
-    padding: 14px 14px;
-    text-align: center; 
-    text-decoration: none;
-    display: inline-block;
-    width: 100%;
+  background-color: white;
+  color: black;
+  border: 2px solid #0078D7;
+  padding: 14px 14px;
+  text-align: center; 
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
 }
 
 .index-a:hover, .index-a:active {
-    background-color: #0078D7;
-    color: white;
+  background-color: #0078D7;
+  color: white;
 }
 
 .index-col {
-    padding: 0 !important;
+  padding: 0 !important;
 }
