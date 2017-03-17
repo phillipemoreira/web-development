@@ -19,7 +19,7 @@ var app = express();
 
 app.use(express.static(path.join(__dirname + "/dist")));
 
-var port = normalizePort(process.env.PORT || '3000');
+var port = normalizePort(process.env.PORT || '4000');
 app.listen(port)
 
 console.log("BOOTSTRAP app running in port " + port);
