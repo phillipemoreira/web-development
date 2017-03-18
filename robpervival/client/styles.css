@@ -34,3 +34,7 @@
 .index-col {
   padding: 0 !important;
 }
+
+.notimplemented:hover, .notimplemented:active {
+  background-color: red !important;
+}
