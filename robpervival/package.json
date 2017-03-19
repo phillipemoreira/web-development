@@ -9,7 +9,8 @@
     "prestart": "gulp prod",
     "start": "node index.js",
     "prewatch": "npm start &",
-    "watch": "gulp watch || true"
+    "watch": "gulp watch || true",
+    "postwtach": "npm stop"
   },
   "repository": {
     "type": "git",

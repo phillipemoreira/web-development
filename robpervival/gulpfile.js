@@ -38,6 +38,7 @@ gulp.task('htmlmin', function() {
     return gulp.src([
             '1.html/*.html',
             '2.css/*.html',
+            '3.javascript/*.html',
             '4.jQuery/html/*.html',
             '5.bootstrap/html/*.html'
         ])
