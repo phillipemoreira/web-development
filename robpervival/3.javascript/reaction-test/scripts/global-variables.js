@@ -6,4 +6,4 @@ var createdTime;
 var clickedTime;
 
 var bleep = new Audio();
-bleep.src = 'resources/click.mp3';
+bleep.src = '../click.mp3';
