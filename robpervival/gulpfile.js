@@ -99,6 +99,9 @@ gulp.task('index', function() {
 gulp.task('watch', function() {
     gulp.watch([
         'client/**/*.*',
+        '1.html/**/*.*',
+        '2.css/**/*.*',
+        '3.javascript/**/*.*',
         '4.jQuery/**/*.*',
         '5.bootstrap/**/*.*'], ['prod']);
 });

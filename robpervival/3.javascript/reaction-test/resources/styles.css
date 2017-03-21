@@ -1,8 +1,8 @@
-  body {
+  .reaction-test body {
      margin: 10px;
   }
 
-  #background {
+  .reaction-test #background {
      background-color: black;
      width: 450px;
      height: 400px;
@@ -14,7 +14,7 @@
      float: left;
   }
 
-  #topbar {
+  .reaction-test #topbar {
      background-color: #A79DC8;
      height: 50px;
      width: 560px;
@@ -24,7 +24,7 @@
      float: left;
   }
 
-  #right-pane {
+  .reaction-test #right-pane {
      background-color: #C7C9D5;
      height: 400px;
      width: 110px;
@@ -36,41 +36,41 @@
      float: left;
   }
 
-  #right-pane p {
+  .reaction-test #right-pane p {
     margin:0;
     padding: 3px;
     font-weight: bold;    
   }
 
-  #topbar p {
+  .reaction-test #topbar p {
      padding: 10px;
      margin: 0px;
      float: left;
      top: 0;
   }
 
-  #right-pane span {
+  .reaction-test #right-pane span {
     text-align: right;
     font-weight: normal;   
   }
 
-  #topbar h2 {
+  .reaction-test #topbar h2 {
      padding: 0px;
      margin: 0px;
      top: 0;
   }
 
-  #topbar button {
+  .reaction-test #topbar button {
     margin: 10px;
     float: right;
     top: 0;
   }
 
-  #topbar span {
+  .reaction-test #topbar span {
      font-weight: bold;
   }
 
-  #box {
+  .reaction-test #box {
      width: 25px;
      height: 25px;
      border-radius: 50px;
@@ -83,11 +83,11 @@
     clear: both;
   }
 
-  #central {
+  .reaction-test #central {
     position: fixed;
   }
 
-  #gameover {
+  .reaction-test #gameover {
     text-align: center;
     padding-top: 30%;
     font-size: 2.5em;

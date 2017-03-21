@@ -1,3 +1,31 @@
+var isStarted = false;
+
+var attempts;
+
+var createdTime;
+var clickedTime;
+
+var bleep = new Audio();
+bleep.src = '../click.mp3';
+
+// Event Handlers
+$("#btn-start").click(function(){
+  if (isStarted == false){
+     start();
+  }
+});
+
+$("#btn-stop").click(function(){
+  if (isStarted == true){
+     stop();
+  }
+});
+
+$("#box").click(function(){
+  handleBoxClick();
+});
+
+// Functions
 function moveCircle(){
    var randonLeft = Math.random() * 420;
    var randonTop = Math.random() * 368;
