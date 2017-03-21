@@ -1,6 +1,6 @@
-
 <!doctype html>
-<html>
+<html class="reaction-test">
+
 <head>
   <title>javascript</title>
 
@@ -8,9 +8,7 @@
   <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
+  <link rel="stylesheet" type="text/css" href="../bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="../styles.min.css">
 
 </head>
@@ -21,9 +19,11 @@
     <h1>Test your Reactions</h1>
     <p>Click on the circles as quickly as you can!</p>
   </div>
-  
+
   <div id="topbar">
-    <h2><p>Your average: <span id="average">(0)</span> ms</p></h2>
+    <h2>
+      <p>Your average: <span id="average">(0)</span> ms</p>
+    </h2>
     <button id="btn-start" class="btn btn-success">start</button>
     <button id="btn-stop" class="btn btn-danger">stop</button>
   </div>
@@ -31,6 +31,7 @@
   <dir class="clear"></dir>
 
   <div id="central">
+
     <div id="background">
       <div id="box"></div>
       <div id="gameover">game over</div>
@@ -48,9 +49,10 @@
       <p> #8 <span id="attempt8">0</span> <span>ms</span></p>
       <p> #9 <span id="attempt9">0</span> <span>ms</span></p>
       <p> #10 <span id="attempt10">0</span> <span>ms</span></p>
-    </div>    
+    </div>
   </div>
 
   <script type="text/javascript" src="../scripts.min.js"></script>
 </body>
+
 </html>
