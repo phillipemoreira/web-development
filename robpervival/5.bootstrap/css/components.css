@@ -1,0 +1,8 @@
+#bootsrap-components .large {
+  font-size: 10em;
+}
+
+#bootsrap-components .medium {
+  font-size: 5em;
+  color: cyan;
+}

@@ -73,6 +73,12 @@ gulp.task('images', function() {
         ]).pipe(gulp.dest('dist/images/'));
 });
 
+gulp.task('fonts', function() {
+    return gulp.src([
+            'bower_components/bootstrap/dist/fonts/*.*'
+        ]).pipe(gulp.dest('dist/fonts/'));
+});
+
 gulp.task('sound', function() {
     return gulp.src([
             '3.javascript/reaction-test/resources/*.mp3'
@@ -108,7 +114,8 @@ gulp.task('watch', function() {
 
 gulp.task('prod', ['jshint'],  function (callback) {
     return runSequence('clean',
-        ['uglify', 'htmlmin', 'cssmin', 'bootstrap', 'bootstrap-css' , 'index', 'images', 'sound'], callback);
+        ['uglify', 'htmlmin', 'cssmin', 'bootstrap', 'bootstrap-css' ,
+             'index', 'images', 'fonts', 'sound'], callback);
 });
 
 gulp.task('default', function (callback) {
