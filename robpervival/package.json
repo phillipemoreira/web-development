@@ -8,7 +8,7 @@
     "postinstall": "bower install",
     "prestart": "gulp prod",
     "start": "node index.js",
-    "prewatch": "gulp prod ; node-debug index.js &",
+    "prewatch": "gulp prod ; node index.js &",
     "watch": "gulp watch || true",
     "postwtach": "npm stop"
   },
