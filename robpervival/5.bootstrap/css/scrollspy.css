@@ -1,0 +1,15 @@
+#scroll-spy .content-div {
+  height: 500px;
+}
+
+#scroll-spy #div1 {
+  background-color: blue;
+}
+
+#scroll-spy #div2 {
+  background-color: green;  
+}
+
+#scroll-spy #div3 {
+  background-color: greenyellow;  
+}
