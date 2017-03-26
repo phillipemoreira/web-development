@@ -12,7 +12,38 @@
 
   </head>
   <body>
-    <h1 style="background-color: red; color: white;">Modals - NOT IMPLEMENTED</h1>
+    <div class="container">
+      <h1>Modals</h1>
+
+      <!-- Trigger the modal with a button -->
+      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">
+        Launch Modal
+      </button>
+
+      <!--Modal-->
+      <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-sm">
+          
+          <!--Modal content-->
+          <div class="modal-content">
+            
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">x</button>
+              <h4 class="modal-title">My Modal!</h4>
+            </div>
+            <div class="modal-body">
+              What a fantastic modal this is!
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-success" data-dismiss="modal">Save Changes</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
 
     <script src="../scripts.min.js"></script>
     <script src="../bootstrap.min.js"></script>
