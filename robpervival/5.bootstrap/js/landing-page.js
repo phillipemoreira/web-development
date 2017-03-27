@@ -1,0 +1,1 @@
+$('#top-container').css('height', $(window).height());

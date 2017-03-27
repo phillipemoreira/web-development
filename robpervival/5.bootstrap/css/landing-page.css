@@ -1,0 +1,9 @@
+#casa-norte .navbar-brand {
+  font-size: 1.8em;
+}
+
+#casa-norte #top-container {
+  background-image: url("../images/header.jpg");
+  width: 100%;
+  background-size: cover;
+}

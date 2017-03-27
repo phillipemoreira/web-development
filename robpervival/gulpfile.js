@@ -69,7 +69,8 @@ gulp.task('images', function() {
             '1.html/images/*.png',
             '2.css/images/*.png',
             '4.jQuery/images/*.png',
-            '5.bootstrap/images/*.png'
+            '5.bootstrap/images/*.png',
+            '5.bootstrap/images/*.jpg'
         ]).pipe(gulp.dest('dist/images/'));
 });
 
