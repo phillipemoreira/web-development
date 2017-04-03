@@ -26,4 +26,4 @@ const testToggleTodo = () => {
 };
 
 testToggleTodo();
-console.log('All tests ran');
+console.log('All tests passed');
