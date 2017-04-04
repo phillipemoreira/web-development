@@ -37,6 +37,28 @@ const todos = (state = [], action) => {
   }
 };
 
+const visibilityFilter = (state = 'SHOW_ALL', action) => {
+  switch (action.type) {
+    case 'SET_VISIBILITY_FILTER':
+      return action.filter;
+    default:
+      return state;
+  }
+};
+
+const todoApp = (state = {}, action) => {
+  return {
+    todos: todos(
+      state.todos,
+      action
+    ),
+    visibilityFilter: visibilityFilter(
+      state.visibilityFilter,
+      action
+    )
+  };
+};
+
 // testing
 const testAddTodo = () => {
   const stateBefore = [];
@@ -102,12 +124,38 @@ const testToggleTodo = () => {
 
 };
 
+const testTodoApp = () => {
+  const stateBefore = {}
+  const action = {
+    type: 'ADD_TODO',
+    text: 'master csgo',
+    id: 3
+  };
+  const stateAfter = {
+    todos: [{
+      id: 3,
+      text: 'master csgo',
+      completed: false
+    }],
+    visibilityFilter: 'SHOW_ALL'
+  };
+
+  deepFreeze(stateBefore);
+  deepFreeze(action);
+
+  expect(
+    todoApp(stateBefore, action)
+  ).toEqual(stateAfter);
+
+}
+
 testAddTodo();
 testToggleTodo();
+testTodoApp();
 console.log('All tests passed');
 
 const { createStore} = Redux;
-const store = createStore(todos);
+const store = createStore(todoApp);
 
 console.log('Initial state: ');
 console.log(store.getState());
@@ -139,6 +187,16 @@ console.log('Dispatching TOGGLE_TODO');
 store.dispatch({
   type: 'TOGGLE_TODO',
   id: 1
+});
+
+console.log('Current state:');
+console.log(store.getState());
+console.log('---------------');
+
+console.log('Dispatching SET_VISIBILITY_FILTER');
+store.dispatch({
+  type: 'SET_VISIBILITY_FILTER',
+  filter: 'SHOW_COMPLETED'
 });
 
 console.log('Current state:');
