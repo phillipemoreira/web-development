@@ -72,28 +72,45 @@ class TodoApp extends Component {
           this.input = node;
         }} />
         <button onClick={() => {
-          store.dispatch({
-            type: 'ADD_TODO',
-            text: this.input.value,
-            id: nextTodoId++
-          });
+          addTodo(this.input.value)
           this.input.value = '';
-          console.log('Current state:');
-          console.log(store.getState());
-          console.log('---------------');
         }}>
         Add TODO
         </button>
         <ul>
           {this.props.todos.map(todo =>
-            <li key={todo.id}>
+            <li key={todo.id}
+                onClick={() => {
+                  toggleTodo(todo)
+                }}
+                style = {{
+                  textDecoration :
+                    todo.completed ?
+                      'line-through' :
+                      'none'
+                }}>
               {todo.text}
-            </li>  
+            </li>
           )}
         </ul>
       </div>
     );
   }
+}
+
+const addTodo = (text) => {
+  store.dispatch({
+    type: 'ADD_TODO',
+    text: text,
+    id: nextTodoId++
+  });
+}
+
+const toggleTodo = (todo) => {
+  store.dispatch({
+    type: 'TOGGLE_TODO',
+    id: todo.id
+  });
 }
 
 const render = () => {
