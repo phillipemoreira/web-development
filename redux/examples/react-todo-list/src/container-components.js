@@ -54,37 +54,24 @@ const VisibleTodoList = connect(
 )(TodoList);
 
 // FilterLink =====================================================
-class FilterLink extends Component {
-  componentDidMount() {
-    const { store } = this.context;
-    this.unsubscribe = store.subscribe(() => {
-      this.forceUpdate();
-    })
-  }
+const mapStateToLinkProps = (state, ownProps) => {
+  return {
+    active :  
+      ownProps.filter === state.visibilityFilter
+  };
+}
 
-  componentWillUnmount() {
-    this.unsubscribe();
-  }
-  
-  render() {
-    const props = this.props;
-    const { store } = this.context;
-    const state = store.getState();
-
-    return (
-      <Link 
-        active = { 
-          props.filter === state.visibilityFilter
-        }
-        onClick = {() => {
-          dispatchSetVisibilityFilter(store, props.filter)
-        }}
-      >
-      { props.children }
-      </Link>
-    );
+const mapDispatchToLinkProps = (dispatch, ownProps) => {
+  return {
+    onTodoClick : () => {
+      dispatch({
+        type: 'SET_VISIBILITY_FILTER',
+        filter: ownProps.filter
+      });
+    }
   }
 }
-FilterLink.contextTypes = {
-  store: React.PropTypes.object
-};
+const FilterLink = connect(
+  mapStateToLinkProps,
+  mapDispatchToLinkProps
+)(Link);
