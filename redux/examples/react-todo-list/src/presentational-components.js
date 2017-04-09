@@ -45,45 +45,33 @@ const Todo = ({ onClick, completed, text }) => (
   </li>
 )
 
-const Footer = ({ visibilityFilter, onFilterClick }) => (
+const Footer = () => (
   <p>
     Show:
     {' '}
-    <FilterLink
-      filter = 'SHOW_ALL'
-      currentFilter = { visibilityFilter }
-      onClick = {onFilterClick}
-    >
+    <FilterLink filter = 'SHOW_ALL'>
        All
     </FilterLink>
     {' '}
-    <FilterLink
-      filter = 'SHOW_ACTIVE'
-      currentFilter = { visibilityFilter }
-      onClick = {onFilterClick}
-    >
+    <FilterLink filter = 'SHOW_ACTIVE'>
       Active
     </FilterLink>
     {' '}
-    <FilterLink
-      filter = 'SHOW_COMPLETED'
-      currentFilter = { visibilityFilter }
-      onClick = {onFilterClick}
-    >
+    <FilterLink filter = 'SHOW_COMPLETED'>
       Completed
     </FilterLink>
   </p>
 )
 
-const FilterLink = ({filter, currentFilter, children, onClick}) => {
-  if (filter === currentFilter) {
+const Link = ({active, children, onClick}) => {
+  if (active) {
     return <span> { children } </span>
   }
   return (
     <a href="#" 
         onClick= {e => {
           e.preventDefault();
-          onClick(filter);
+          onClick();
         }}
     >
     {children}

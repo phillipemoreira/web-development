@@ -1,3 +1,5 @@
+const { Component } = React;
+
 const render = () => {
   ReactDOM.render(
     <TodoApp {...store.getState()} />,
@@ -14,12 +16,39 @@ const TodoApp = ({ todos, visibilityFilter }) => (
         onTodoClick = { dispatchToggleTodo }
       />
 
-      <Footer
-        visibilityFilter = { visibilityFilter }
-        onFilterClick = { dispatchSetVisibilityFilter }
-      />
+      <Footer />
     </div>
 )
+
+class FilterLink extends Component {
+  componentDidMount() {
+    this.unsubscribe = store.subscribe(() => {
+      this.forceUpdate();
+    })
+  }
+
+  componentWillUnmount() {
+    this.unsubscribe();
+  }
+  
+  render() {
+    const props = this.props;
+    const state = store.getState();
+
+    return (
+      <Link 
+        active = { 
+          props.filter === state.visibilityFilter
+        }
+        onClick = {() => {
+          dispatchSetVisibilityFilter(props.filter)
+        }}
+      >
+      { props.children }
+      </Link>
+    );
+  }
+}
 
 store.subscribe(render);
 
