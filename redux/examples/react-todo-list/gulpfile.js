@@ -12,6 +12,7 @@ gulp.task('clean', function() {
 gulp.task('bundle', ['clean'], function() {
     return streamqueue({objectMode: true}, 
             gulp.src('src/reducers.js'),
+            gulp.src('src/action-creators.js'),
             gulp.src('src/presentational-components.js'),
             gulp.src('src/auxiliary-functions.js'),
             gulp.src('src/container-components.js'),

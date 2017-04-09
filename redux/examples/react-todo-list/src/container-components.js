@@ -2,7 +2,6 @@ const { Component } = React;
 const { connect } = ReactRedux;
 
 // AddTodo ========================================================
-let nextTodoId = 0;
 let AddTodo = ({ dispatch }) => {
   let input;
   return (
@@ -14,11 +13,7 @@ let AddTodo = ({ dispatch }) => {
         />
         <button 
           onClick={() => {
-            dispatch({
-              type: 'ADD_TODO',
-              text: input.value,
-              id: nextTodoId++
-            });
+            dispatch(addTodo(input.value));
             input.value =  '';
           }}
         >
@@ -38,16 +33,15 @@ const mapStateToTodoListProps = (state) => {
     )
   }
 }
+
 const mapDispatchToTodoListProps = (dispatch) => {
   return {
     onTodoClick : (id) => {
-      dispatch({
-        type: 'TOGGLE_TODO',
-        id
-      });
+      dispatch(toggleTodo(id));
     }
   }
 }
+
 const VisibleTodoList = connect(
   mapStateToTodoListProps,
   mapDispatchToTodoListProps
@@ -63,14 +57,12 @@ const mapStateToLinkProps = (state, ownProps) => {
 
 const mapDispatchToLinkProps = (dispatch, ownProps) => {
   return {
-    onTodoClick : () => {
-      dispatch({
-        type: 'SET_VISIBILITY_FILTER',
-        filter: ownProps.filter
-      });
+    onClick : () => {
+      dispatch(setVisibilityFilter(ownProps.filter));
     }
   }
 }
+
 const FilterLink = connect(
   mapStateToLinkProps,
   mapDispatchToLinkProps

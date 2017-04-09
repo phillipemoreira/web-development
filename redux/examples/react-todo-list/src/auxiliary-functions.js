@@ -17,18 +17,3 @@ const getVisibleTodos = (todos, filter) => {
       return todos;
   }
 }
-
-const dispatchAddTodo = (store, text) => {
-  store.dispatch({
-    type: 'ADD_TODO',
-    text,
-    id: nextTodoId++
-  });
-}
-
-const dispatchSetVisibilityFilter = (store, filter) => {
-  store.dispatch({
-    type: 'SET_VISIBILITY_FILTER',
-    filter
-  });
-}
