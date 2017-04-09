@@ -1,10 +1,10 @@
-const TodoList = ({ todos, onTodoClick }) => (
+const TodoList = ({ store, todos, onTodoClick }) => (
   <ul>
     { todos.map(todo => 
       <Todo
         key={ todo.id }
         {...todo}
-        onClick={ () =>  onTodoClick(todo.id)}
+        onClick={ () =>  onTodoClick(store, todo.id)}
       />
     )}
   </ul>
@@ -24,19 +24,28 @@ const Todo = ({ onClick, completed, text }) => (
   </li>
 )
 
-const Footer = () => (
+const Footer = ({ store }) => (
   <p>
     Show:
     {' '}
-    <FilterLink filter = 'SHOW_ALL'>
+    <FilterLink
+      filter='SHOW_ALL'
+      store={ store }
+    >
        All
     </FilterLink>
     {' '}
-    <FilterLink filter = 'SHOW_ACTIVE'>
+    <FilterLink
+      filter = 'SHOW_ACTIVE'
+      store={ store }
+    >
       Active
     </FilterLink>
     {' '}
-    <FilterLink filter = 'SHOW_COMPLETED'>
+    <FilterLink
+      filter = 'SHOW_COMPLETED'
+      store={ store }
+    >
       Completed
     </FilterLink>
   </p>

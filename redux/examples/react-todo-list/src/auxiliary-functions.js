@@ -19,7 +19,7 @@ const getVisibleTodos = (todos, filter) => {
 }
 
 let nextTodoId = 0;
-const dispatchAddTodo = (text) => {
+const dispatchAddTodo = (store, text) => {
   store.dispatch({
     type: 'ADD_TODO',
     text,
@@ -27,14 +27,14 @@ const dispatchAddTodo = (text) => {
   });
 }
 
-const dispatchToggleTodo = (id) => {
+const dispatchToggleTodo = (store, id) => {
   store.dispatch({
     type: 'TOGGLE_TODO',
     id
   });
 }
 
-const dispatchSetVisibilityFilter = (filter) => {
+const dispatchSetVisibilityFilter = (store, filter) => {
   store.dispatch({
     type: 'SET_VISIBILITY_FILTER',
     filter

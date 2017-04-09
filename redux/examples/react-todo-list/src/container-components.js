@@ -1,6 +1,6 @@
 const { Component } = React;
 
-const AddTodo = () => {
+const AddTodo = ({ store }) => {
   let input;
   return (
     <div>
@@ -11,7 +11,7 @@ const AddTodo = () => {
         />
         <button 
           onClick={() => {
-            dispatchAddTodo(input.value);
+            dispatchAddTodo(store, input.value);
             input.value =  '';
           }}
         >
@@ -23,6 +23,7 @@ const AddTodo = () => {
 
 class VisibleTodoList extends Component {
   componentDidMount() {
+    const { store } = this.props;
     this.unsubscribe = store.subscribe(() => {
       this.forceUpdate();
     })
@@ -34,17 +35,19 @@ class VisibleTodoList extends Component {
 
   render() {
     const props = this.props;
+    const { store } = this.props;
     const state = store.getState();
 
     return (
       <TodoList 
+        store = { store }
         todos={
           getVisibleTodos(
             state.todos,
             state.visibilityFilter
           )
         }
-        onTodoClick = { dispatchToggleTodo }
+        onTodoClick = {dispatchToggleTodo }
       />
     );   
   }
@@ -52,6 +55,7 @@ class VisibleTodoList extends Component {
 
 class FilterLink extends Component {
   componentDidMount() {
+    const { store } = this.props;
     this.unsubscribe = store.subscribe(() => {
       this.forceUpdate();
     })
@@ -63,6 +67,7 @@ class FilterLink extends Component {
   
   render() {
     const props = this.props;
+    const { store } = this.props;
     const state = store.getState();
 
     return (
@@ -71,7 +76,7 @@ class FilterLink extends Component {
           props.filter === state.visibilityFilter
         }
         onClick = {() => {
-          dispatchSetVisibilityFilter(props.filter)
+          dispatchSetVisibilityFilter(store, props.filter)
         }}
       >
       { props.children }
