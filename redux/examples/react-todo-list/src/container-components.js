@@ -1,6 +1,9 @@
 const { Component } = React;
+const { connect } = ReactRedux;
 
-const AddTodo = (props, { store }) => {
+// AddTodo ========================================================
+let nextTodoId = 0;
+let AddTodo = ({ dispatch }) => {
   let input;
   return (
     <div>
@@ -11,7 +14,11 @@ const AddTodo = (props, { store }) => {
         />
         <button 
           onClick={() => {
-            dispatchAddTodo(store, input.value);
+            dispatch({
+              type: 'ADD_TODO',
+              text: input.value,
+              id: nextTodoId++
+            });
             input.value =  '';
           }}
         >
@@ -20,11 +27,10 @@ const AddTodo = (props, { store }) => {
     </div>
   )
 }
-AddTodo.contextTypes = {
-  store: React.PropTypes.object
-};
+AddTodo = connect()(AddTodo);
 
-const mapStateToProps = (state) => {
+// VisibleTodoList ===============================================
+const mapStateToTodoListProps = (state) => {
   return {
     todos: getVisibleTodos(
       state.todos,
@@ -32,8 +38,7 @@ const mapStateToProps = (state) => {
     )
   }
 }
-
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToTodoListProps = (dispatch) => {
   return {
     onTodoClick : (id) => {
       dispatch({
@@ -43,10 +48,12 @@ const mapDispatchToProps = (dispatch) => {
     }
   }
 }
+const VisibleTodoList = connect(
+  mapStateToTodoListProps,
+  mapDispatchToTodoListProps
+)(TodoList);
 
-const { connect } = ReactRedux;
-const VisibleTodoList = connect(mapStateToProps, mapDispatchToProps)(TodoList);
-
+// FilterLink =====================================================
 class FilterLink extends Component {
   componentDidMount() {
     const { store } = this.context;

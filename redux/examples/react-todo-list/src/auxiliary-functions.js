@@ -18,7 +18,6 @@ const getVisibleTodos = (todos, filter) => {
   }
 }
 
-let nextTodoId = 0;
 const dispatchAddTodo = (store, text) => {
   store.dispatch({
     type: 'ADD_TODO',
