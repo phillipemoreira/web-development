@@ -27,13 +27,6 @@ const dispatchAddTodo = (store, text) => {
   });
 }
 
-const dispatchToggleTodo = (store, id) => {
-  store.dispatch({
-    type: 'TOGGLE_TODO',
-    id
-  });
-}
-
 const dispatchSetVisibilityFilter = (store, filter) => {
   store.dispatch({
     type: 'SET_VISIBILITY_FILTER',

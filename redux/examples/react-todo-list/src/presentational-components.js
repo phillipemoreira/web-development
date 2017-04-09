@@ -1,10 +1,10 @@
-const TodoList = ({ store, todos, onTodoClick }) => (
+const TodoList = ({todos, onTodoClick }) => (
   <ul>
     { todos.map(todo => 
       <Todo
         key={ todo.id }
         {...todo}
-        onClick={ () =>  onTodoClick(store, todo.id)}
+        onClick={ () =>  onTodoClick(todo.id)}
       />
     )}
   </ul>
@@ -24,7 +24,7 @@ const Todo = ({ onClick, completed, text }) => (
   </li>
 )
 
-const Footer = ({ store }) => (
+const Footer = () => (
   <p>
     Show:
     {' '}
