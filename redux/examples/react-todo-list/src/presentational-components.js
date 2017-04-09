@@ -1,24 +1,3 @@
-const AddTodo = ({ onAddClick }) => {
-  let input;
-  return (
-    <div>
-        <input type="text" 
-          ref={node => {
-            input = node;
-          }} 
-        />
-        <button 
-          onClick={() => {
-            onAddClick(input.value);
-            input.value =  '';
-          }}
-        >
-        Add TODO
-        </button>
-    </div>
-  )
-}
-
 const TodoList = ({ todos, onTodoClick }) => (
   <ul>
     { todos.map(todo => 

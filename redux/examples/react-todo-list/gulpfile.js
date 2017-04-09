@@ -14,7 +14,8 @@ gulp.task('bundle', ['clean'], function() {
             gulp.src('src/reducers.js'),
             gulp.src('src/presentational-components.js'),
             gulp.src('src/auxiliary-functions.js'),
-            gulp.src('src/container-components.js')
+            gulp.src('src/container-components.js'),
+            gulp.src('src/app.js')
         )
         .pipe(concat('bundle.js'))
         .pipe(gulp.dest('dist/'));

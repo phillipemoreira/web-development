@@ -48,10 +48,10 @@ const visibilityFilter = (state = 'SHOW_ALL', action) => {
 
 const { combineReducers } = Redux;
 
-const todoApp = combineReducers({
+const todoAppReducers = combineReducers({
   todos,
   visibilityFilter
 });
 
 const { createStore} = Redux;
-const store = createStore(todoApp);
+const store = createStore(todoAppReducers);

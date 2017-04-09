@@ -1,24 +1,54 @@
 const { Component } = React;
 
-const render = () => {
-  ReactDOM.render(
-    <TodoApp {...store.getState()} />,
-    document.getElementById('root')
-  );
-};
-
-const TodoApp = ({ todos, visibilityFilter }) => (
+const AddTodo = () => {
+  let input;
+  return (
     <div>
-      <AddTodo onAddClick={ dispatchAddTodo }/>
+        <input type="text" 
+          ref={node => {
+            input = node;
+          }} 
+        />
+        <button 
+          onClick={() => {
+            dispatchAddTodo(input.value);
+            input.value =  '';
+          }}
+        >
+        Add TODO
+        </button>
+    </div>
+  )
+}
 
+class VisibleTodoList extends Component {
+  componentDidMount() {
+    this.unsubscribe = store.subscribe(() => {
+      this.forceUpdate();
+    })
+  }
+
+  componentWillUnmount() {
+    this.unsubscribe();
+  }
+
+  render() {
+    const props = this.props;
+    const state = store.getState();
+
+    return (
       <TodoList 
-        todos={ getVisibleTodos(todos,visibilityFilter) }
+        todos={
+          getVisibleTodos(
+            state.todos,
+            state.visibilityFilter
+          )
+        }
         onTodoClick = { dispatchToggleTodo }
       />
-
-      <Footer />
-    </div>
-)
+    );   
+  }
+}
 
 class FilterLink extends Component {
   componentDidMount() {
@@ -49,9 +79,3 @@ class FilterLink extends Component {
     );
   }
 }
-
-store.subscribe(render);
-
-// Render for the first time
-render();
-
