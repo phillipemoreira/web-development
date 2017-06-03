@@ -1,9 +1,34 @@
-#casa-norte .navbar-brand {
-  font-size: 1.8em;
+/*Color pallete*/
+.navy-blue {
+  background-color: #161220;
+}
+.gunmetal {
+  background-color: #233239;
+}
+.rusty-red {
+  background-color: #984B45;
+}
+.warm-yellow {
+  background-color: #E9C87B;
 }
 
-#casa-norte #top-container {
+/*ids*/
+#casa-norte body h1 {
+  color: #000000;
+}
+
+#casa-norte .navbar-brand-image {
+  width: 40px;
+  margin: 3px;
+}
+
+#casa-norte #who {
   background-image: url("../images/header.jpg");
   width: 100%;
+  opacity: 0.8;
   background-size: cover;
+}
+
+#casa-norte #top-row {
+  margin-top: 200px;
 }
