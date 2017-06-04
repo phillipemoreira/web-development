@@ -31,6 +31,7 @@
   padding: 0 20px;
 }
 
+
 /*navbar*/
 #casa-norte #navbar-brand-image {
   width: 40px;
@@ -59,7 +60,7 @@
 }
 
 #casa-norte #who-features {
-  padding-top: 10px;
+  padding-top: 50px;
 }
 
 #casa-norte #who-features i {
@@ -70,3 +71,12 @@
 #casa-norte #who-features h3 {
   color: #689775;
 }
+
+#casa-norte #map-container {
+  padding-top: 50px;
+ }
+
+#casa-norte #map {
+  height: 400px;
+  width: 100%;
+ }
