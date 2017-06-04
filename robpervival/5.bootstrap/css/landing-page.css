@@ -11,24 +11,62 @@
 .warm-yellow {
   background-color: #E9C87B;
 }
-
-/*ids*/
-#casa-norte body h1 {
-  color: #000000;
+.jade {
+  background-color: #689775;
 }
 
-#casa-norte .navbar-brand-image {
+.page-section {
+  text-align: center;
+}
+
+.title {
+  font-size: 3em;
+}
+
+.feature {
+  padding: 25px 0;
+}
+
+.icon-content {
+  padding: 0 20px;
+}
+
+/*navbar*/
+#casa-norte #navbar-brand-image {
   width: 40px;
   margin: 3px;
 }
 
-#casa-norte #who {
+/*content*/
+#casa-norte #content-container {
+  margin-top: 50px;
+}
+
+#casa-norte #carousel {
   background-image: url("../images/header.jpg");
   width: 100%;
-  opacity: 0.8;
+  margin: 0;
+  opacity: 1;
   background-size: cover;
 }
 
-#casa-norte #top-row {
-  margin-top: 200px;
+#casa-norte #carousel-header {
+  padding-top: 200px;
+}
+
+#casa-norte #who-header {
+  padding: 60px 0 10px 0;
+}
+
+#casa-norte #who-features {
+  padding-top: 10px;
+}
+
+#casa-norte #who-features i {
+  font-size: 72px;
+  color: #689775;
+}
+
+#casa-norte #who-features h3 {
+  color: #689775;
 }
