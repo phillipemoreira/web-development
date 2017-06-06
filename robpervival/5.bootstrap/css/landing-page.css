@@ -60,23 +60,94 @@
 }
 
 #casa-norte #who-features {
-  padding-top: 50px;
+  padding-top: 30px;
 }
 
 #casa-norte #who-features i {
-  font-size: 72px;
+  font-size: 90px;
   color: #689775;
+}
+
+#casa-norte #who-features p {
+  font-size: 1.2em;
 }
 
 #casa-norte #who-features h3 {
   color: #689775;
 }
 
-#casa-norte #map-container {
-  padding-top: 50px;
- }
+#casa-norte #contact-header {
+  margin-top: 20px;
+}
+
+#casa-norte #contact-body {
+  text-align: left;
+}
+
+#casa-norte .footer-box {
+  margin-top: 30px;
+  text-align: justify;
+}
+
+#casa-norte #more-info-table {
+  width: 100%;
+}
+
+#casa-norte #more-info-table tbody {
+  display: table-row-group;
+  vertical-align: middle;
+}
+
+#casa-norte #more-info-table tbody {
+  display: table-row;
+}
+
+#casa-norte #more-info-table th, td {
+  min-width: 120px;
+  border-bottom: 1px dashed #cccccc;
+  padding: 8px 0;
+}
+
+#casa-norte #facebook-container {
+  width: 100%;
+  margin-top: 30px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#casa-norte #facebook-img {
+  width: 270px;
+}
 
 #casa-norte #map {
-  height: 400px;
+  height: 380px;
   width: 100%;
- }
+  margin-bottom: 30px;
+}
+
+#casa-norte #copyright {
+  width: 100%;
+  height: 50px;
+}
+
+#casa-norte #copyright-container {
+  float: left;
+  justify-content: center;
+  align-items: center;
+}
+
+#casa-norte #copyright h5 {
+  color: #FFFFE7;
+}
+
+#casa-norte #footer-brand-container {
+  float: right;
+  align-content: right;
+}
+
+#casa-norte #footer-brand-image {
+  width: 40px;
+  margin: 3px;
+}
