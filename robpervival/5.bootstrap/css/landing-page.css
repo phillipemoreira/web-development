@@ -72,6 +72,9 @@
   padding: 0 20px;
 }
 
+.clear {
+  clear: both;
+}
 
 /*navbar*/
 #casa-norte #navbar-brand-image {
@@ -84,18 +87,11 @@
   margin-top: 50px;
 }
 
-#casa-norte #carousel-title {
-  position:absolute;
-  top:30px;
-  left:30px;
-  width:480px;
-  height:120px;
-  z-index:0;
-  font-size:50px;
-  color:#ffffff;
-  line-height:60px;
+#casa-norte #header {
+  widows: 200px;
+  left: 200px;
+  background-color: #F8F8F8;
 }
-
 
 #casa-norte #carousel-loading {
   position:absolute;
@@ -114,6 +110,33 @@
   height:500px;
   overflow:hidden;
 }
+
+#casa-norte #header-brand {
+  height: 110px;
+  width: 100%;
+  color: rgb(51, 51, 51);
+}
+
+#casa-norte #brand-box {
+  position: relative;
+  top: -40px;
+  height: 150px;
+  width: 150px;
+  background-color: #F8F8F8;
+  float: left;
+}
+
+#casa-norte #brand-box img {
+  position: relative;
+  left: -28px;
+  height: 160px;
+}
+
+#casa-norte #store-name-wrapper {
+  margin-top: 10px;
+}
+
+#casa-norte #who {}
 
 #casa-norte #who-header {
   padding: 60px 0 10px 0;
