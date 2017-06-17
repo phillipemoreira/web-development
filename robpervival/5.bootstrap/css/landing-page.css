@@ -1,3 +1,44 @@
+/* jssor slider bullet navigator skin 05 css */
+/*
+.jssorb05 div           (normal)
+.jssorb05 div:hover     (normal mouseover)
+.jssorb05 .av           (active)
+.jssorb05 .av:hover     (active mouseover)
+.jssorb05 .dn           (mousedown)
+*/
+.jssorb05 {
+    position: absolute;
+}
+.jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
+    position: absolute;
+    /* size of bullet elment */
+    width: 16px;
+    height: 16px;
+    background: url('../images/b05.png') no-repeat;
+    overflow: hidden;
+    cursor: pointer;
+}
+.jssorb05 div { background-position: -7px -7px; }
+.jssorb05 div:hover, .jssorb05 .av:hover { background-position: -37px -7px; }
+.jssorb05 .av { background-position: -67px -7px; }
+.jssorb05 .dn, .jssorb05 .dn:hover { background-position: -97px -7px; }
+
+.jssora031 {display:block;position:absolute;cursor:pointer;}
+.jssora031 .a {fill:#fff;}
+.jssora031:hover {opacity:.8;}
+.jssora031.jssora031dn {opacity:.5;}
+.jssora031.jssora031ds { opacity: .3; pointer-events: none; }
+
+#jssor_1 {
+  position:relative;
+  margin:0 auto;
+  top:0px;
+  left:0px;
+  width:1300px;
+  overflow:hidden;
+  visibility:hidden;
+}
+
 /*Color pallete*/
 .navy-blue {
   background-color: #161220;
@@ -43,16 +84,35 @@
   margin-top: 50px;
 }
 
-#casa-norte #carousel {
-  background-image: url("../images/header.jpg");
-  width: 100%;
-  margin: 0;
-  opacity: 1;
-  background-size: cover;
+#casa-norte #carousel-title {
+  position:absolute;
+  top:30px;
+  left:30px;
+  width:480px;
+  height:120px;
+  z-index:0;
+  font-size:50px;
+  color:#ffffff;
+  line-height:60px;
 }
 
-#casa-norte #carousel-header {
-  padding-top: 200px;
+
+#casa-norte #carousel-loading {
+  position:absolute;
+  top:0px;
+  left:0px;
+  background:url('../images/loading.gif') no-repeat 50% 50%;
+  background-color:rgba(0, 0, 0, 0.7);
+}
+
+#casa-norte #carousel-slides {
+  cursor:default;
+  position:relative;
+  top:0px;
+  left:0px;
+  width:1300px;
+  height:500px;
+  overflow:hidden;
 }
 
 #casa-norte #who-header {
