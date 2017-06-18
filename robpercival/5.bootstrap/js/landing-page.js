@@ -18,7 +18,7 @@ function initMap() {
 
 // *********************************************************FACEBOOK
 $('#facebook-img').click(function() {
-    var profile = 'https://www.facebook.com/alzenia.moreira';
+    var profile = 'https://www.facebook.com/casadonortezena';
     window.open(profile,'_blank','',''); 
 });
 // *****************************************************************
